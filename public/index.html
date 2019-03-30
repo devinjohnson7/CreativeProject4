@@ -4,22 +4,24 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css" />
-  <title>Museum of Ordinary Objects</title>
+  <title>PhotoShare</title>
 </head>
 
 <body>
   <div class="header">
     <div class="logo">
-      <img src="/images/ordinary.png">
+      <img src="/images/camera.png">
     </div>
     <div class="title">
-      <h2>CS 260</h2>
-      <h1>Museum of Ordinary Objects</h1>
+      <h1>PhotoShare</h1>
+      <h2>(not a copy of Instagram)</h2>
     </div>
   </div>
+  <a class="post-button" href="/post.html">Create Post</a><br>
+  <a class="post-button" href="/edit.html">Edit/Delete Post</a>
   <div id="app" class="content">
     <section class="image-gallery">
-      <div class="image" v-for="item in items">
+      <div class="image" v-for="item in items.slice().reverse()">
         <h2>{{item.title}}</h2>
         <img :src="item.path" />
         <p>{{item.description}}</p>
@@ -27,8 +29,7 @@
     </section>
   </div>
   <div class="footer">
-    <a href="/admin.html">Admin</a><br>
-    <a href="https://github.com/BYU-CS-260-Winter-2019/lab-4-devinjohnson7">GitHub Link</a>
+  <a href="https://github.com/devinjohnson7/CreativeProject4">GitHub Link</a>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>

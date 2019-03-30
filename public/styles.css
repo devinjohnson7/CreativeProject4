@@ -1,7 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  background: #fff;
+  background: #FEFEFE;
   padding: 0px;
   margin: 0px;
 }
@@ -10,8 +10,8 @@ body {
 .header {
   display: flex;
   padding: 20px 100px 0px 100px;
-  background-color: #5BDEFF;
-  color: #fff;
+  background-color: #82525B;
+  color: #FEFEFE;
 }
 
 .title {
@@ -20,10 +20,23 @@ body {
 
 .title h1, .title h2 {
   margin: 0px;
+  text-align: center;
 }
 
-.title h1 {
-  border-top: 1px solid #000;
+.logo img {
+  max-width: 20%;
+  max-height: auto;
+}
+
+.post-button, .back-button {
+  margin-top: 30px;
+  margin-left: 80px;
+  background-color: #483F4A;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 /* Footer */
@@ -78,6 +91,17 @@ input, textarea, select, button {
   font-size: 1em;
 }
 
+.post-body {
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 30px;
+}
+
+#admin h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
 .form {
   margin-right: 50px;
 }
@@ -118,7 +142,8 @@ html {
 }
 
 .image-gallery {
-  column-gap: 1.5em;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .image {
@@ -129,25 +154,4 @@ html {
 
 .image img {
   width: 100%;
-}
-
-/* Masonry on large screens */
-@media only screen and (min-width: 1024px) {
-  .image-gallery {
-    column-count: 4;
-  }
-}
-
-/* Masonry on medium-sized screens */
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
-  .image-gallery {
-    column-count: 3;
-  }
-}
-
-/* Masonry on small screens */
-@media only screen and (max-width: 767px) and (min-width: 540px) {
-  .image-gallery {
-    column-count: 2;
-  }
 }
