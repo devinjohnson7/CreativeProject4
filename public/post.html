@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div id="admin">
+  <div id="post">
     <div class="header">
       <div class="logo">
         <img src="/images/camera.png">
@@ -28,36 +28,13 @@
           <br>
           <input v-model="title" placeholder="Name"><br>
           <br>
-          <textarea v-model="description" placeholder="Caption"></textarea>
+          <textarea v-model="caption" placeholder="Caption"></textarea>
           <p></p>
         </div>
         <div class="upload" v-if="addItem">
           <h2>{{addItem.title}}</h2>
           <img :src="addItem.path" />
-          <p>{{addItem.description}}</p>
-        </div>
-      </div>
-      <div class="heading">
-        <div class="circle">2</div>
-        <h2>Edit/Delete an Item</h2>
-      </div>
-      <div class="edit">
-        <div class="form">
-          <input v-model="findTitle" placeholder="Search">
-          <div class="suggestions" v-if="suggestions.length > 0">
-            <div class="suggestion" v-for="s in suggestions" @click="selectItem(s)">{{s.title}}
-            </div>
-          </div>
-        </div>
-        <div class="upload" v-if="findItem">
-          <input v-model="findItem.title">
-          <textarea v-model="findItem.description"></textarea>
-          <p></p>
-          <img :src="findItem.path" />
-        </div>
-        <div class="actions" v-if="findItem">
-          <button @click="deleteItem(findItem)">Delete</button>
-          <button @click="editItem(findItem)">Edit</button>
+          <p>{{addItem.caption}}</p>
         </div>
       </div>
     </div>
@@ -67,7 +44,7 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
-  <script src="/admin.js"></script>
+  <script src="/post.js"></script>
 </body>
 
 </html>

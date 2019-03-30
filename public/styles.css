@@ -55,11 +55,10 @@ body {
 }
 
 .image h2 {
-  font-style: italic;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
-/* Admin */
+/* Post / Edit */
 .heading {
   display: flex;
   margin-bottom: 20px;
@@ -97,7 +96,7 @@ input, textarea, select, button {
   padding-top: 30px;
 }
 
-#admin h2 {
+#post h2, #edit h2 {
   text-align: center;
   font-size: 30px;
 }

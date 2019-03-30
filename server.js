@@ -29,7 +29,7 @@ const upload = multer({
 const itemSchema = new mongoose.Schema({
   title: String,
   path: String,
-  description: String,
+  caption: String,
 });
 
 // Create a model for items in the museum.
@@ -52,7 +52,7 @@ app.post('/api/items', async (req, res) => {
   const item = new Item({
     title: req.body.title,
     path: req.body.path,
-    description: req.body.description,
+    caption: req.body.caption,
   });
   try {
     await item.save();
@@ -92,7 +92,7 @@ app.put('/api/items/:_id', async (req,res) => {
     let item_id = req.params._id;
     let item = await Item.findOne({"_id": item_id});
     item.title = req.body.title;
-    item.description = req.body.description;
+    item.caption = req.body.caption;
     await item.save();
     res.sendStatus(200);
   } catch (error) {
