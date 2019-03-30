@@ -1,0 +1,25 @@
+{
+  "name": "lab-4-devinjohnson7",
+  "version": "1.0.0",
+  "description": "In this assignment, you will build an entire web application, using Vue for the\r front end and Node, Express, and Mongo on the back end.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BYU-CS-260-Winter-2019/lab-4-devinjohnson7.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BYU-CS-260-Winter-2019/lab-4-devinjohnson7/issues"
+  },
+  "homepage": "https://github.com/BYU-CS-260-Winter-2019/lab-4-devinjohnson7#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "multer": "^1.4.1"
+  }
+}
